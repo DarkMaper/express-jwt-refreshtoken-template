@@ -1,0 +1,54 @@
+{
+  "name": "express-jwt-refreshtoken-template",
+  "version": "0.0.1",
+  "description": "User authentication template via JWT with Refresh Token for Express.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "init-admin": "babel-node src/scripts/install.js",
+    "del-sessions": "babel-node src/scripts/autodelete_sessions.js",
+    "start": "node .",
+    "build": "babel src/ -d lib",
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node src/index.js",
+    "prebuild": "rimraf lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkMaper/express-jwt-refreshtoken-template.git"
+  },
+  "author": "DarkMaper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarkMaper/express-jwt-refreshtoken-template/issues"
+  },
+  "homepage": "https://github.com/DarkMaper/express-jwt-refreshtoken-template#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.20.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.27.0",
+    "express": "^4.17.2",
+    "express-useragent": "^1.0.15",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "regenerator-runtime": "^0.13.9",
+    "uuid": "^8.3.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.16.5",
+    "@shelf/jest-mongodb": "^2.1.1",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2"
+  }
+}

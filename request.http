@@ -1,0 +1,39 @@
+### Sign in user
+POST http://localhost:3000/api/v1/auth/signin
+Content-Type: application/json
+
+{
+    "email": "informatica@petroprix.com",
+    "password": "password",
+    "fingerprint": "request-app"
+}
+
+### Sign in bad user
+POST http://localhost:3000/api/v1/auth/signin
+Content-Type: application/json
+
+{
+    "email": "informatics@petroprix.com",
+    "password": "password",
+    "fingerprint": "request-app"
+}
+
+### Sign in without fingerprint user
+POST http://localhost:3000/api/v1/auth/signin
+Content-Type: application/json
+
+{
+    "email": "informatics@petroprix.com",
+    "password": "password"
+}
+### Get user info
+GET http://localhost:3000/api/v1/auth/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MWMxZjcwZDI1MGQ5Y2MwOGFiYzM5NDEiLCJuYW1lIjoiaW5mb3JtYXRpY2FAcGV0cm9wcml4LmNvbSIsImlhdCI6MTY0MDE3NzYzOCwiZXhwIjoxNjQwMTc4NTM4fQ.AV0VwPov157C2udTjSY1RYJNbHExr0hIhUWVwUtOnx4
+
+### Refresh Token
+POST http://localhost:3000/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+    "fingerprint": "request-app"
+}
