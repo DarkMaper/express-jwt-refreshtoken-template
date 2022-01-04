@@ -44,9 +44,7 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/node": "^7.16.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.16.5",
-    "@shelf/jest-mongodb": "^2.1.1",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.15",
     "rimraf": "^3.0.2"
