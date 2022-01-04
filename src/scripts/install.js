@@ -3,25 +3,30 @@ import '../database';
 import Role from '../models/Role';
 import User from '../models/User';
 (async () => {
-        const roleAdmin = {
+
+        const adminRole = new Role({
             name: 'admin',
             permissions: ['*']
-        };
+        });
 
-        const newRole = new Role(roleAdmin);
+        const userRole = new Role({
+            name: 'user',
+            permissions: []
+        })
 
         const adminUser = {
             email: 'admin@example.com',
             first_name: 'Admin',
             last_name: 'Example',
             password: 'password',
-            role: newRole._id
+            role: adminRole._id
         }
 
         const newUser = new User(adminUser);
 
-        await newRole.save();
+        await adminRole.save();
         await newUser.save();
+        await userRole.save();
         console.log('Admin role and Admin user is created');
         process.exit(0);
     }
